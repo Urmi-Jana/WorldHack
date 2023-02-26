@@ -1,0 +1,27 @@
+<%- include ("partials/header") %>
+
+<h3> Map!!!!</h3>
+
+<div id ="map" style = "width:800px; height:600px;"></div>
+
+<script>
+  // Creating map options
+  var mapOptions = {
+  center: [18.385044, 78.486671],
+  zoom: 10
+  }
+  
+  // Creating a map object
+  var map = new L.map('map', mapOptions);
+  
+  // Creating a Layer object
+  var layer = new     L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+  
+  // Adding layer to the map
+  map.addLayer(layer);
+  
+let marker = new L.Marker([18.385044, 78.486671]);
+
+marker.bindPopup('name').openPopup();
+marker.addTo(map);
+  </script>

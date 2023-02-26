@@ -32,6 +32,10 @@ app.post('/', function(req, res){
 
 })
 
+app.get('/map', function(req, res){
+    res.render('map')
+})
+
 app.listen(3000, function () {
     console.log("Server started at 3000");
 })

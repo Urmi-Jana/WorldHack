@@ -3,7 +3,7 @@
 <% var records = data.records %>
 
 <% records.forEach(record => {  %>
-    <h3><%= record.fields.name_en %></h3>
+    <h3> <a href = '/map'> <%= record.fields.name_en %></a> </h3>
     <p> <%= record.fields. short_description_en %> </p>
     
 <% }); %>
